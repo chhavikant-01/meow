@@ -1,10 +1,5 @@
 // page.tsx
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { LampDemo } from "@/components/ui/lamp";
-import { WavyBackground } from "@/components/ui/wavy-background";
-import { SparklesCore } from "@/components/ui/sparkles";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { BackgroundBeams } from "@/components/ui/backround-beams";
 import { Timeline } from "@/components/ui/timeline";
 import Navbar from "@/components/ui/navbar"; // Importing Navbar
