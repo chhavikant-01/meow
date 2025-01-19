@@ -21,7 +21,7 @@ export function FeaturesSectionDemo() {
     {
       title: "Empowering Communities",
       description:
-        "Over 10,000 individuals from underserved communities have gained access to financial education through FinLitAid.",
+        "Over 10,000 individuals from underserved communities have gained access to financial education through Meowney.",
       icon: <IconEaseInOut className="text-neutral-100" />,
     },
     {
@@ -36,7 +36,7 @@ export function FeaturesSectionDemo() {
       icon: <IconCloud className="text-neutral-100" />,
     },
     {
-      title: "Why Choose FinLitAid?",
+      title: "Why Choose Meowney?",
       description: "Experience a personalized journey toward financial literacy and growth, with features designed just for you.",
       icon: <IconHelp className="text-neutral-100" />,
     },
