@@ -55,7 +55,7 @@ export default function Home() {
               shadow-[0_0_40px_rgba(59,130,246,0.6)]
               hover:shadow-[0_0_60px_rgba(59,130,246,0.8)]
               border-2 border-black">
-              Talk to "Meowney" Financial Assistant
+              Talk to <span className="text-[#123524] font-semibold italic">Meowney</span> Financial Assistant
             </Button>
       </Link>
     </div>
