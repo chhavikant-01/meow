@@ -1,7 +1,7 @@
 // page.tsx
 import { LampDemo } from "@/components/ui/lamp";
 import { BackgroundBeams } from "@/components/ui/backround-beams";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Timeline } from "@/components/ui/timeline";
 import Navbar from "@/components/ui/navbar"; // Importing Navbar
 import Link from "next/link";
