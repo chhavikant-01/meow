@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "https://meow-cyan.vercel.app"
+      },
+      {
+        "source": "/:path*",
+        "destination": "https://meow-ai-chatbot.vercel.app/:path*"
+      }
+    ]
+  }
