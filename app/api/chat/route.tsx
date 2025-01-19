@@ -15,9 +15,9 @@ export async function POST(req: Request) {
 
         const requestBody = {
             question: latestMessage.content,
-            randomness: 0.5,
+            randomness: 0.7,
             stream_data: false,
-            model: "aicon-v4-nano-160824",
+            model: "aicon-v4-large-160824",
             training_data: "Before you start reading the training data, the read the following paragraph that gives you the conversation history, your response should align with your conversation history \n" + `\n *****\n (coversation history: ${conversationHistory})\n *****`+trainingData,
             response_type: "text",
         };
