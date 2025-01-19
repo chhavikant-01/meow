@@ -1,6 +1,7 @@
 // page.tsx
 import { LampDemo } from "@/components/ui/lamp";
 import { BackgroundBeams } from "@/components/ui/backround-beams";
+import { Button } from "@/components/ui/button";
 import { Timeline } from "@/components/ui/timeline";
 import Navbar from "@/components/ui/navbar"; // Importing Navbar
 import Link from "next/link";
@@ -49,7 +50,7 @@ export default function Home() {
       <Navbar /> {/* Navbar component */}
       <LampDemo />
           <div className="absolute left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2 z-50 ">
-          <Link href="/chatbot">
+          <Link href="/chat">
             <Button className="px-12 py-8 bg-lampColor font-sans hover:bg-lampColor text-white text-xl font-bold rounded-full shadow-lg transition-all
               shadow-[0_0_40px_rgba(59,130,246,0.6)]
               hover:shadow-[0_0_60px_rgba(59,130,246,0.8)]
