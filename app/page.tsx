@@ -3,7 +3,7 @@ import { LampDemo } from "@/components/ui/lamp";
 import { BackgroundBeams } from "@/components/ui/backround-beams";
 import { Button } from "@/components/ui/button";
 import { Timeline } from "@/components/ui/timeline";
-import Navbar from "@/components/ui/navbar"; // Importing Navbar
+import Navbar from "@/components/ui/navbar";
 import Link from "next/link";
 import { FeaturesSectionDemo } from "@/components/ui/feature-section";
 import { FloatingDockDemo } from "@/components/ui/floating-deck";

@@ -10,6 +10,7 @@ import { DragEvent, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import { Markdown } from "@/components/markdown";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 interface Message {
   id: string;
@@ -21,6 +22,37 @@ interface Message {
     contentType: string;
   }>;
 }
+
+const words = [
+  {
+    text: "How",
+  },
+  {
+    text: "can",
+  },
+  {
+    text: "I",
+  },
+  {
+    text: "help",
+  },
+  {
+    text: "you",
+  },
+  {
+    text: "build",
+  },
+  {
+    text: "your",
+  },
+  {
+    text: "financial",
+  },
+  {
+    text: "future?",
+    className: "text-blue-500 dark:text-blue-500",
+  },
+]
 
 const getTextFromDataUrl = (dataUrl: string) => {
   const base64 = dataUrl.split(",")[1];
@@ -253,6 +285,9 @@ export default function Home() {
       </AnimatePresence>
 
       <div className="flex flex-col justify-between gap-4">
+        {
+          messages.length > 0 ? (
+        
         <div className="flex flex-col gap-2 h-full w-dvw items-center overflow-y-scroll">
           {messages.map((message, index) => (
             <motion.div
@@ -304,7 +339,13 @@ export default function Home() {
 
           <div ref={messagesEndRef} />
         </div>
-
+):    (
+  <motion.div className="h-[350px] px-4 w-full md:w-[500px] md:px-0 pt-20">
+            <div className="border rounded-lg p-6 flex flex-col gap-4 text-zinc-500 text-sm dark:text-zinc-400 dark:border-zinc-700">
+      <TypewriterEffect words={words} />
+      </div>
+      </motion.div>
+      )}
         <form
           className="flex flex-col gap-2 relative items-center"
           onSubmit={(event) => {
@@ -364,7 +405,7 @@ export default function Home() {
           />
 
           <div className="flex items-center w-full md:max-w-[500px] max-w-[calc(100dvw-32px)] bg-zinc-100 dark:bg-zinc-700 rounded-full px-4 py-2">
-            <button
+            {/* <button
               type="button"
               onClick={handleUploadClick}
               className="text-zinc-500 dark:text-zinc-300 hover:text-zinc-700 dark:hover:text-zinc-100 focus:outline-none mr-3"
@@ -373,7 +414,7 @@ export default function Home() {
               <span className="w-5 h-5">
                 <AttachmentIcon aria-hidden="true" />
               </span>
-            </button>
+            </button> */}
 
             <input
               ref={inputRef}
