@@ -2,8 +2,7 @@
 "use client";
 
 import {
-  AttachmentIcon,
-  BotIcon,
+  SparklesIcon,
   UserIcon,
 } from "@/components/icons";
 import { DragEvent, useEffect, useRef, useState } from "react";
@@ -11,6 +10,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import { Markdown } from "@/components/markdown";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface Message {
   id: string;
@@ -263,11 +264,18 @@ export default function Home() {
 
   return (
     <div
-      className="flex flex-row justify-center pb-20 h-dvh bg-white dark:bg-zinc-900"
+      className="relative flex flex-row justify-center pb-20 h-dvh bg-white dark:bg-zinc-900"
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
     >
+      <Link
+       href={"/"} 
+      >
+      <Button variant="outline" className="absolute left-0 mt-20 ml-10 bg-[#3f3f46]">
+        back
+      </Button>
+      </Link>
       <AnimatePresence>
         {isDragging && (
           <motion.div
@@ -299,7 +307,7 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
             >
               <div className="size-[24px] flex flex-col justify-center items-center flex-shrink-0 text-zinc-400">
-                {message.role === "assistant" ? <BotIcon /> : <UserIcon />}
+                {message.role === "assistant" ? <SparklesIcon /> : <UserIcon />}
               </div>
 
               <div className="flex flex-col gap-1">
@@ -329,10 +337,10 @@ export default function Home() {
           {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
             <div className="flex flex-row gap-2 px-4 w-full md:w-[500px] md:px-0">
               <div className="size-[24px] flex flex-col justify-center items-center flex-shrink-0 text-zinc-400">
-                <BotIcon />
+                <SparklesIcon />
               </div>
               <div className="flex flex-col gap-1 text-zinc-400">
-                <div>hmm...</div>
+                <div>purr...</div>
               </div>
             </div>
           )}
