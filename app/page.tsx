@@ -69,7 +69,7 @@ export default function Home() {
       <div id = "about">
         <FeaturesSectionDemo/>
       </div>
-      <div id = "socials">
+      <div id = "socials" className="my-20">
         <FloatingDockDemo/>
       </div>
     </main>

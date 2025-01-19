@@ -20,37 +20,27 @@ export function FloatingDockDemo() {
     {
       title: "Products",
       icon: <IconTerminal2 className="h-7 w-7 text-black bg-white rounded-full p-0.5" />,
-      href: "/products",
-    },
-    {
-      title: "Components",
-      icon: <IconNewSection className="h-7 w-7 text-black bg-white rounded-full p-0.5" />,
-      href: "/components",
+      href: "/#features",
     },
     {
       title: "Finance",
       icon: <IconWallet className="h-7 w-7 text-black bg-white rounded-full p-0.5" />,
-      href: "/finance",
+      href: "/chat",
     },
     {
-      title: "Changelog",
+      title: "Imapct",
       icon: <IconExchange className="h-7 w-7 text-black bg-white rounded-full p-0.5" />,
-      href: "/changelog",
-    },
-    {
-      title: "Twitter",
-      icon: <IconBrandX className="h-7 w-7 text-black bg-white rounded-full p-0.5" />,
-      href: "https://twitter.com",
+      href: "/#about",
     },
     {
       title: "GitHub",
       icon: <IconBrandGithub className="h-7 w-7 text-black bg-white rounded-full p-0.5" />,
-      href: "https://github.com",
+      href: "https://github.com/chhavikant-01/meow",
     },
   ];
 
   return (
-    <div className="flex items-center justify-center h-24 w-full bg-black">
+    <div className="flex items-center justify-center w-full bg-black">
       <FloatingDock 
         desktopClassName="bg-black border-neutral-800"
         mobileClassName="translate-y-0 bg-black border-neutral-800"
