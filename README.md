@@ -1,4 +1,4 @@
-# Meowney: AI-Powered Financial Literacy Coach
+# Meowney: AI-Powered Financial Literacy Assistant
 
 Meowney is an AI-driven financial assistant designed to help users understand financial concepts, manage budgets, and make informed decisions. Tailored specifically for underserved populations, Meowney leverages Worqhat's AiCon v4 large model to provide personalized financial advice. It retains conversation history within the current session to offer coherent and context-aware assistance.
 
