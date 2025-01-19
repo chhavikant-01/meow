@@ -10,7 +10,8 @@ export default {
   theme: {
   	extend: {
   		colors: {
-			customDark: "#020617", 
+			customDark: "#020617",
+			lampColor:"#13BFDB",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

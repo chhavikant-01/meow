@@ -1,8 +1,12 @@
 // page.tsx
 import { LampDemo } from "@/components/ui/lamp";
 import { BackgroundBeams } from "@/components/ui/backround-beams";
+import { Button } from "@/components/ui/button";
 import { Timeline } from "@/components/ui/timeline";
 import Navbar from "@/components/ui/navbar"; // Importing Navbar
+import Link from "next/link";
+import { FeaturesSectionDemo } from "@/components/ui/feature-section";
+import { FloatingDockDemo } from "@/components/ui/floating-deck";
 
 const myTimelineData = [
   {
@@ -16,22 +20,6 @@ const myTimelineData = [
     ),
   },
   {
-    title: "Systematic Investment Plan (SIP) Service",
-    content: (
-      <p className="text-white dark:text-white text-sm md:text-base">
-        Customized SIP roadmaps to help you achieve your financial goals:
-        <br />
-        <strong>3-month plan</strong>: Short-term goals like building an emergency fund.
-        <br />
-        <strong>6-month plan</strong>: Mid-term savings for essentials or small investments.
-        <br />
-        <strong>12-month+ plan</strong>: Long-term wealth-building strategies.
-        <br />
-        Personalized guidance based on your income and goals.
-      </p>
-    ),
-  },
-  {
     title: "Multilingual Support",
     content: (
       <p className="text-white dark:text-white text-sm md:text-base">
@@ -41,26 +29,7 @@ const myTimelineData = [
       </p>
     ),
   },
-  {
-    title: "Budgeting Tools and Resources",
-    content: (
-      <p className="text-white dark:text-white text-sm md:text-base">
-        Interactive budget calculators to help you plan and track your expenses.
-        Step-by-step guides to create sustainable financial plans.
-        Tips and tricks for saving on a tight budget.
-      </p>
-    ),
-  },
-  {
-    title: "Personalized Financial Insights",
-    content: (
-      <p className="text-white dark:text-white text-sm md:text-base">
-        Track your financial habits and get tailored advice to improve them.
-        Monthly reports to show your progress toward your goals.
-        Insights based on your spending patterns to help you make smarter decisions.
-      </p>
-    ),
-  },
+
   {
     title: "Fraud Awareness and Financial Safety",
     content: (
@@ -75,42 +44,29 @@ const myTimelineData = [
 
 export default function Home() {
   return (
-    <>
+    <main className="min-h screen bg-black">
       <Navbar /> {/* Navbar component */}
       <LampDemo />
+
+          <div className="absolute left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2 z-50 ">
+          <Link href="/chat">
+            <Button className="px-12 py-8 bg-lampColor font-sans hover:bg-lampColor text-white text-xl font-bold rounded-full shadow-lg transition-all
+              shadow-[0_0_40px_rgba(59,130,246,0.6)]
+              hover:shadow-[0_0_60px_rgba(59,130,246,0.8)]
+              border-2 border-black">
+              Talk to Your AI Financial Coach
+            </Button>
+      </Link>
+    </div>
       
-      {/* <WavyBackground>
-        <div className="h-[40rem] w-full bg-transparent flex flex-col items-center justify-center overflow-hidden rounded-md">
-          <h1 className="md:text-6xl text-3xl lg:text-7xl font-sans font-bold text-center text-white relative z-20">
-            Your AI Financial Coach
-          </h1>
-          <div className="w-[40rem] h-40 relative">
-            <SparklesCore
-              id="tsparticlesfullpage"
-              background="transparent"
-              minSize={0.6}
-              maxSize={1.4}
-              particleDensity={100}
-              className="w-full h-full"
-              particleColor="#FFFFFF"
-            />
-          </div>
-          <div className="w-[80%] md:w-[60%] mt-4 font-sans z-20">
-            <TextGenerateEffect className="text-white" words="Empowering underserved communities with AI-driven financial literacy. Learn, budget, and make informed decisions." />
-          </div>
-          <button className="px-8 py-4 bg-blue-600 text-white font-bold rounded-full mt-8 hover:bg-blue-700 transition-all z-20">
-            Get Started for Free
-          </button>
-          <BackgroundBeams />
-        </div>
-      </WavyBackground> */}
 
       {/* Timeline Section */}
       <div className="relative">
         <BackgroundBeams />
         <Timeline data={myTimelineData} />
       </div>
-
-    </>
+        <FeaturesSectionDemo/>
+        <FloatingDockDemo/>
+    </main>
   );
 }
